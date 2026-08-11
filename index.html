@@ -171,14 +171,17 @@
 
   /* 예약 안내 */
   #booking{background:var(--bg2)}
-  .book-grid{display:grid;grid-template-columns:1fr;gap:clamp(14px,2vw,20px)}
-  @media(min-width:820px){.book-grid{grid-template-columns:repeat(3,1fr)}}
+  .book-grid{display:grid;grid-template-columns:1fr;gap:clamp(14px,2vw,18px)}
+  @media(min-width:600px){.book-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:1060px){.book-grid{grid-template-columns:repeat(4,1fr)}}
   .book-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;display:flex;flex-direction:column}
   .book-card.feat{border-color:var(--gold);box-shadow:0 20px 44px -30px rgba(176,138,79,.5)}
   .book-card .bt{font-family:var(--kr-disp);font-weight:600;font-size:1.2rem}
   .book-card .badge{display:inline-block;align-self:flex-start;background:var(--gold);color:#2A2320;font-size:.7rem;font-weight:700;padding:4px 11px;border-radius:20px;margin-bottom:12px}
   .book-card p{color:var(--ink2);font-size:.92rem;line-height:1.8;margin-top:8px}
-  .book-card .price{font-family:var(--en);color:var(--gold-d);font-size:1.15rem;margin-top:14px}
+  .book-card .price{font-family:var(--kr);font-weight:700;color:var(--gold-d);font-size:1.05rem;margin-top:14px}
+  .book-card .go{margin-top:auto;padding-top:16px;display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.9rem;color:var(--gold-d)}
+  .book-card .go:hover{color:var(--espresso)}
   .policy{max-width:820px;margin:clamp(22px,3vw,32px) auto 0;background:var(--card);border:1px dashed var(--line2);border-radius:var(--r);padding:22px 26px}
   .policy h4{font-family:var(--kr);font-weight:700;font-size:.96rem;color:var(--ink);margin-bottom:8px}
   .policy p{color:var(--ink2);font-size:.88rem;line-height:1.85}
@@ -415,9 +418,10 @@
       <p>예약하신 시간은 오직 고객님만을 위해 비워 두는 1인샵입니다. 아래에서 상황에 맞는 예약창으로 진행해 주세요.</p>
     </div>
     <div class="book-grid">
-      <div class="book-card feat reveal"><span class="badge">첫 방문 · 매월 5명 한정</span><div class="bt">첫 방문 상담</div><p>포커스킨 진단 + 피부 고민 상담 + 홈케어 컨설팅. 현재 상태와 반복 원인, 압출 필요 여부, 장벽 손상 정도를 함께 확인합니다. (약 20~30분)</p><div class="price en">상담비 30,000원</div><p style="margin-top:6px;font-size:.84rem">당일 관리 진행 시 관리 금액에서 차감돼요.</p></div>
-      <div class="book-card reveal"><div class="bt">재방문 예약</div><p>금액권·횟수권을 보유하신 멤버십 고객, 또는 1회성 재방문 고객을 위한 예약창입니다. 컨디션에 따라 관리 시간은 전·후로 약 15분 변동될 수 있어요.</p><div class="price en">1회성 예약금 30,000원</div><p style="margin-top:6px;font-size:.84rem">예약금은 당일 케어 비용에서 차감됩니다.</p></div>
-      <div class="book-card reveal"><div class="bt">멤버십 가입</div><p>장기적으로 꾸준히 관리받는 고객을 위한 금액권입니다. 100만원권부터 준비되어 있으며, 일반 예약은 신규·재방문 예약창을 이용해 주세요.</p><div class="price en">1,000,000원~</div><p style="margin-top:6px;font-size:.84rem">최대 5% 적립 · 자유 결제 가능</p></div>
+      <div class="book-card feat reveal"><span class="badge">첫 방문 · 매월 5명 한정</span><div class="bt">첫 방문 상담</div><p>포커스킨 진단 + 피부 고민 상담 + 홈케어 컨설팅. 현재 상태와 반복 원인, 압출 필요 여부, 장벽 손상 정도를 함께 확인합니다. (약 20~30분)</p><div class="price">상담비 30,000원</div><p style="margin-top:6px;font-size:.84rem">당일 관리 진행 시 관리 금액에서 차감돼요.</p><a class="go" href="https://map.naver.com/p/entry/place/1606812990?c=15.00,0,0,0,dh&amp;placePath=%2Fticket" target="_blank" rel="noopener">첫 방문 예약하기 →</a></div>
+      <div class="book-card reveal"><div class="bt">재방문 · 1회성</div><p>금액권 없이 방문하시는 재방문 고객님을 위한 예약창입니다. 컨디션에 따라 관리 시간은 전·후로 약 15분 변동될 수 있어요.</p><div class="price">예약금 30,000원</div><p style="margin-top:6px;font-size:.84rem">예약금은 당일 케어 비용에서 차감됩니다.</p><a class="go" href="https://map.naver.com/p/entry/place/1606812990?c=15.00,0,0,0,dh&amp;placePath=%2Fticket" target="_blank" rel="noopener">1회성 예약하기 →</a></div>
+      <div class="book-card reveal"><div class="bt">재방문 · 멤버십</div><p>금액권·횟수권을 보유하신 멤버십 고객님을 위한 예약창입니다. 약 30여 개 프로그램 중 그날 피부 컨디션에 맞는 관리로 진행해 드려요.</p><div class="price">보유 금액권 · 횟수권 사용</div><p style="margin-top:6px;font-size:.84rem">당일 취소는 3회까지 양해해 드려요.</p><a class="go" href="https://map.naver.com/p/entry/place/1606812990?c=15.00,0,0,0,dh&amp;placePath=%2Fticket" target="_blank" rel="noopener">멤버십 예약하기 →</a></div>
+      <div class="book-card reveal"><div class="bt">멤버십 가입</div><p>장기적으로 꾸준히 관리받는 고객님을 위한 금액권입니다. 100만~800만원권과 자유 결제까지 준비되어 있어요.</p><div class="price">57,000원~</div><p style="margin-top:6px;font-size:.84rem">최대 5% 적립 · 자유 결제 가능</p><a class="go" href="https://map.naver.com/p/entry/place/1606812990?c=15.00,0,0,0,dh&amp;placePath=%2Fticket" target="_blank" rel="noopener">멤버십 가입하기 →</a></div>
     </div>
     <div class="policy reveal">
       <h4>예약 안내 &amp; 취소 규정</h4>
